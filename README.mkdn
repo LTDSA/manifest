@@ -47,7 +47,7 @@ ssh-keygen -t rsa -C "您的@email.com"
 
 现在在您的计算机navigate to您的home "~/.ssh"并打开"id_rsa.pub", 复制/粘贴the context to "Gerrit SSH公共密钥"。
 
-您可以patches给我们通过使用这些命令在终端：
+您可以patches给我们通过在终端使用这些命令：
 
 ```
     （从root android directory）
