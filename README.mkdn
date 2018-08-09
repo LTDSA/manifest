@@ -27,7 +27,7 @@ $ mka bacon -jX
 
 ### 提交Patches ###
 
-Patches are always welcome!  请提交您的patches到我们的Gerrit。
+Patches are always欢迎！请提交您的patches到我们的Gerrit。
 
 要开始投稿，只需要在 https://gerrit.pixelexperience.org 注册
 
