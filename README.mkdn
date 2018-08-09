@@ -1,72 +1,72 @@
 # Pixel Experience #
 
-### Sync ###
+### 同步 ###
 
 ```bash
 
-# Initialize local repository
+# 初始化本地存储库
 repo init -u https://github.com/PixelExperience/manifest -b oreo-mr1
 
-# Sync
+# 同步
 repo sync -c -jx --force-sync --no-clone-bundle --no-tags
 ```
 
-### Build ###
+### 建立 ###
 
 ```bash
 
-# Set up environment
+# 设置环境
 $ . build/envsetup.sh
 
-# Choose a target
+# 选择一个目标
 $ lunch aosp_$device-userdebug
 
-# Build the code
+# 建立代码
 $ mka bacon -jX
 ```
 
-### Submitting Patches ###
+### 提交Patches ###
 
-Patches are always welcome!  Please submit your patches to our Gerrit.
+Patches are always welcome!  请提交您的patches到我们的Gerrit。
 
-To start contributing, just register at https://gerrit.pixelexperience.org
+要开始投稿，只需要在 https://gerrit.pixelexperience.org 注册
 
-Open up terminal to create your ssh keys required for submitting patches to gerrit and type in:
+打开终端来创建您的ssh密钥需要提交patches to gerrit并输入：
 
 ```bash
-git config --global review.gerrit.pixelexperience.org.username <username you registered with>
+git config --global review.gerrit.pixelexperience.org.username <您注册时输入的用户名>
 
-git config --global review.gerrit.pixelexperience.org.email <your email you registered with>
+git config --global review.gerrit.pixelexperience.org.email <您注册时输入的邮箱>
 
-ssh-keygen -t rsa -C "your@email.com"
+ssh-keygen -t rsa -C "您的@email.com"
 ```
 
-In our gerrit click on your "Avatar" on the top right, then on "Settings".
+在我们的gerrit点击您的"Avatar"在右上角，然后on "Settings"。
 
-While in 'Settings' Click on "SSH Public Keys" on the left hand side and then on "Add Key".
+而在'Settings'点击"SSH公共密钥"在左手边然后on "添加密钥".
 
-Now on your computer navigate to your home "~/.ssh" and open up "id_rsa.pub", copy/paste the context to "Gerrit SSH Public Keys".
+现在在您的计算机navigate to您的home "~/.ssh"并打开"id_rsa.pub", 复制/粘贴the context to "Gerrit SSH公共密钥"。
 
-You can send patches to us by using these commands in terminal:
+您可以patches给我们通过使用这些命令在终端：
 
 ```
-    (From root android directory)
+    （从root android directory）
     . build/envsetup.sh
-    (Go to repo you are patching, make your changes and commit)
+    （Go to存储库您正在patching, make您的changes并commit）
     pixelgerrit push oreo-mr1
 
-    or
+    或者
 
-    git push ssh://<username>@gerrit.pixelexperience.org:29418/<project> HEAD:refs/for/<branch>
+    git push ssh://<用户名>@gerrit.pixelexperience.org:29418/<项目> HEAD:refs/for/<分支>
 ```
 
-* `<username>` - Your Gerrit username (which can be seen/set [here](https://gerrit.pixelexperience.org/#/settings/))
-* `<project>` - The git repo you are pushing to; all options can be viewed at [this link](https://gerrit.pixelexperience.org/#/admin/projects/)
-* `<branch>` - The git branch your change is based on; for projects using this manifest, it is `oreo-mr1`
+* `<用户名>` - 您的Gerrit用户名 (which can be seen/set [这里](https://gerrit.pixelexperience.org/#/settings/))
+* `<项目>` - The git存储库you are pushing to; all options can be viewed at [此链接](https://gerrit.pixelexperience.org/#/admin/projects/)
+* `<分支>` - The git分支您的change is基于；for projects using此项目清单，it is `oreo-mr1`
 
-Make your changes and commit with a detailed message, starting with what you are working with
-Commit your patches in a single commit. Squash multiple commits using this command: `git rebase -i HEAD~<# of commits>`
+Make您的changes并commit with a detailed message, starting with what you are working with
+Commit您的patches in a single commit. Squash multiple commits using此命令：`git rebase -i HEAD~<# of commits>`
 
-For more help, use this commands: `pixelgerrit help` or `pixelrebase help`
+要得到更多帮助，使用此命令：`pixelgerrit help`或者`pixelrebase help`
 
-[View Code Review](https://gerrit.pixelexperience.org/)
+[查看代码审核](https://gerrit.pixelexperience.org/)
