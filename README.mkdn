@@ -27,11 +27,11 @@ $ mka bacon -jX
 
 ### 提交Patches ###
 
-Patches are always欢迎！请提交您的patches到我们的Gerrit。
+Patches是经常欢迎的！请提交您的patches到我们的Gerrit。
 
 要开始投稿，只需要在 https://gerrit.pixelexperience.org 注册
 
-打开终端来创建您的ssh密钥需要提交patches to gerrit并输入：
+打开终端来创建您需要提交patches到gerrit的ssh密钥并输入：
 
 ```bash
 git config --global review.gerrit.pixelexperience.org.username <您注册时输入的用户名>
@@ -43,16 +43,16 @@ ssh-keygen -t rsa -C "您的@email.com"
 
 在我们的gerrit点击您的"Avatar"在右上角，然后on "Settings"。
 
-而在'Settings'点击"SSH公共密钥"在左手边然后on "添加密钥".
+而在“设置”点击“SSH公共密钥”在左手边然后“添加密钥”。
 
 现在在您的计算机navigate to您的home "~/.ssh"并打开"id_rsa.pub", 复制/粘贴the context to "Gerrit SSH公共密钥"。
 
 您可以patches给我们通过在终端使用这些命令：
 
 ```
-    （从root android directory）
+    （从android根目录）
     . build/envsetup.sh
-    （Go to存储库您正在patching, make您的changes并commit）
+    （Go to存储库您正在patching, 作出您的改变并commit）
     pixelgerrit push oreo-mr1
 
     或者
@@ -64,8 +64,8 @@ ssh-keygen -t rsa -C "您的@email.com"
 * `<项目>` - The git存储库you are pushing to; all options can be viewed at [此链接](https://gerrit.pixelexperience.org/#/admin/projects/)
 * `<分支>` - The git分支您的change is基于；for projects using此项目清单，it is `oreo-mr1`
 
-Make您的changes并commit with a detailed message, starting with what you are working with
-Commit您的patches in a single commit. Squash multiple commits using此命令：`git rebase -i HEAD~<# of commits>`
+作出您的改变并commit通过一条详细信息，starting with what you are working with
+Commit您的patches in a single commit. Squash multiple commits使用此命令：`git rebase -i HEAD~<# of commits>`
 
 要得到更多帮助，使用此命令：`pixelgerrit help`或者`pixelrebase help`
 
